@@ -3,11 +3,22 @@ import Img from "../../../components/smallComp/image/Img";
 import ArrowIcon from "../../../components/Icons/ArrowIcon";
 export default function AboutMe(props) {
   const technologies = [
-    ["Next.js", "JavaScript (ES6+)", "Tailwind CSS", "Ether.js", "Solidity"],
-    ["Node.js", "TypeScript", "Framer Motion", "react-moralis", "web3.js"],
+    [
+      "Next.js",
+      "JavaScript (ES6+)",
+      "Tailwind CSS",
+      "Git and Github",
+      "Solidity",
+      "Bash",
+    ],
+    ["Node.js", "NFT", "Wordpress", "MySQL", "Snowflake"],
   ];
   return (
-    <div id="aboutSection" data-aos="fade-up" className="snap-start flex flex-col  items-center py-20 bg-AAprimary">
+    <div
+      id="aboutSection"
+      data-aos="fade-up"
+      className="snap-start flex flex-col  items-center py-20 bg-AAprimary"
+    >
       {/* // ? 0.1 About Me */}
       <div
         className="flex flex-col space-y-8 px-4 sm:px-0 w-full sm:w-[500px] 
@@ -15,8 +26,15 @@ export default function AboutMe(props) {
       >
         <div className="flex flex-row items-center ">
           <div className="flex flex-row  items-center mr-4">
-            <ArrowIcon className={"flex-none h-4 md:h-6 w-4 md:w-5 translate-y-[0.5px] text-AAsecondary"} />
-            <span className="text-AAsecondary font-Header text-sm  sm:text-xl"> 01.</span>
+            <ArrowIcon
+              className={
+                "flex-none h-4 md:h-6 w-4 md:w-5 translate-y-[0.5px] text-AAsecondary"
+              }
+            />
+            <span className="text-AAsecondary font-Header text-sm  sm:text-xl">
+              {" "}
+              01.
+            </span>
             <span className="flex-none text-gray-200 opacity-85 font-bold tracking-wider text-lg sm:text-2xl pl-4">
               About Me
             </span>
@@ -29,21 +47,42 @@ export default function AboutMe(props) {
           <div className="w-full md:w-7/12 space-y-4 sm:text-base text-sm ">
             <div className="font-Header ">
               <span className="text-gray-400 ">
-                Hello! My name is Abdellatif, and I am a passionate software engineer and problem solver, dedicated to
-                creating impactful codes that thrive on the internet. My journey in computer science began in 2009 when
-                I delved into the world of Ethical Hacking using BackTrack OS. Little did I know that programming skills
-                would become essential in pursuing this interest, marking the start of my programming journey.
+                Hi! I'm Bishnu Thapa, a passionate technologist with a blend of
+                expertise in database administration and Web3 development.Highly
+                motivated{" "}
+                <span className="text-AAsecondary"> Blockchain Developer </span>
+                and{" "}
+                <span className="text-AAsecondary">
+                  {" "}
+                  Database Administrator{" "}
+                </span>
+                with expertise in{" "}
+                <span className="text-AAsecondary"> Solidity</span>,{" "}
+                <span className="text-AAsecondary"> Next.js</span>,{" "}
+                <span className="text-AAsecondary"> Snowflake</span>,{" "}
+                <span className="text-AAsecondary"> AWS</span>,{" "}
+                <span className="text-AAsecondary"> Azure</span>. Proven ability
+                to design, develop, and manage innovative database solutions and
+                decentralized applications (dApps). Eager to contribute to a
+                dynamic organization and leverage my skills for impactful
+                projects.
               </span>
             </div>
             <div className="font-Header ">
               <span className="text-gray-400 ">
-                Since pursuing my engineering degree, my career has taken me through diverse industries, allowing me to
-                refine my expertise in desktop and web development. In the realm of{" "}
-                <span className="text-AAsecondary">web3</span>, I am dedicated to pushing boundaries and driving
-                advancements. With experience working alongside esteemed organizations like{" "}
-                <span className="text-AAsecondary">ENS Vision</span>, where I played a key role in releasing v2 of{" "}
-                <span className="text-AAsecondary">ENS Vision Marketplace</span> , my passion for web3 and continuous
-                learning drives me to make a positive impact and advance technology.
+                Since pursuing my engineering degree, my career has taken me
+                through diverse industries, allowing me to refine my expertise
+                in desktop and web development. In the realm of{" "}
+                <span className="text-AAsecondary">web3</span>, I am dedicated
+                to pushing boundaries and driving advancements. With experience
+                working alongside esteemed organizations like{" "}
+                <span className="text-AAsecondary">Koinon.Tech</span>, where I
+                played a key role in releasing{" "}
+                <span className="text-AAsecondary">
+                  NFT based Hotel Booking Dapp
+                </span>{" "}
+                , my passion for web3 and continuous learning drives me to make
+                a positive impact and advance technology.
               </span>
             </div>
             {/* <div className="font-Header tracking-wide">
@@ -61,7 +100,8 @@ export default function AboutMe(props) {
 
             <div className="font-Header tracking-wide">
               <span className="text-gray-400  ">
-                Here are a few technologies I&apos;ve been working with recently :
+                Here are a few technologies I&apos;ve been working with recently
+                :
               </span>
             </div>
             <div className="font-Header tracking-wide flex flex-row space-x-16">
@@ -69,9 +109,14 @@ export default function AboutMe(props) {
                 <div className="flex flex-col space-y-4 sm:text-base text-sm">
                   {technologies[0].map((tech, index) => {
                     return (
-                      <div key={index} className="flex flex-row items-center space-x-2">
+                      <div
+                        key={index}
+                        className="flex flex-row items-center space-x-2"
+                      >
                         <ArrowIcon className={"h-3 w-3 text-AAsecondary"} />
-                        <span className="text-gray-400 sm:text-sm text-xs">{tech}</span>
+                        <span className="text-gray-400 sm:text-sm text-xs">
+                          {tech}
+                        </span>
                       </div>
                     );
                   })}
@@ -81,9 +126,14 @@ export default function AboutMe(props) {
                 <div className="flex flex-col space-y-4 sm:text-base text-sm">
                   {technologies[1].map((tech, index) => {
                     return (
-                      <div key={index} className="flex flex-row items-center space-x-2">
+                      <div
+                        key={index}
+                        className="flex flex-row items-center space-x-2"
+                      >
                         <ArrowIcon className={"h-3 w-3 text-AAsecondary"} />
-                        <span className="text-gray-400 sm:text-sm text-xs">{tech}</span>
+                        <span className="text-gray-400 sm:text-sm text-xs">
+                          {tech}
+                        </span>
                       </div>
                     );
                   })}
