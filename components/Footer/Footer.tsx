@@ -11,10 +11,10 @@ const ClickableIcon = props => {
   );
 };
 const IconsData = [
-  { href: "https://github.com/hktitof", Icon: GithubIcon },
-  { href: "https://www.linkedin.com/in/abdellatif-anaflous/", Icon: LinkedinIcon },
-  { href: "https://www.instagram.com/titof_abdo/", Icon: InstagramIcon },
-  { href: "https://www.youtube.com/@abdellatif_anaflous", Icon: YoutubeIcon },
+  { href: "https://github.com/biishnuthapa/", Icon: GithubIcon },
+  { href: "https://www.linkedin.com/in/biishnu/", Icon: LinkedinIcon },
+  { href: "https://www.instagram.com/ig_bisshnu/", Icon: InstagramIcon },
+  { href: "https://www.youtube.com/bishnuthapa", Icon: YoutubeIcon },
 ];
 
 export default function Fotter(props: { githubUrl: string; hideSocialsInDesktop: boolean }) {
@@ -32,7 +32,7 @@ export default function Fotter(props: { githubUrl: string; hideSocialsInDesktop:
     text-sm  space-y-2  "
         >
           <span className="group-hover:text-AAsecondary sm:text-sm text-xs">
-            Built by Anaflous Abdellatif
+            Built by Bishnu Abdellatif
           </span>
 
           <span className="text-xs flex flex-row items-center space-x-2 group-hover:text-AAsecondary">
