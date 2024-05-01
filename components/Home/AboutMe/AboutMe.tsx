@@ -47,9 +47,9 @@ export default function AboutMe(props) {
           <div className="w-full md:w-7/12 space-y-4 sm:text-base text-sm ">
             <div className="font-Header ">
               <span className="text-gray-400 ">
-                Hi! I'm Bishnu Thapa, a passionate technologist with a blend of
-                expertise in database administration and Web3 development.Highly
-                motivated{" "}
+                Hi! I&apos;m Bishnu Thapa, a passionate technologist with a
+                blend of expertise in database administration and Web3
+                development. Highly motivated{" "}
                 <span className="text-AAsecondary"> Blockchain Developer </span>
                 and{" "}
                 <span className="text-AAsecondary">
