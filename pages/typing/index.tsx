@@ -150,7 +150,10 @@ export default function Home() {
         <>
           {/* Main page / Typing page */}
           <main className="w-full 2xl:px-96 xl:px-80 lg:px-64 md:px-28 px-12 flex flex-col justify-center items-center space-y-12">
-            <div ref={textInputRef} className="relative w-full h-full flex flex-col space-y-8  ">
+            <div
+              ref={textInputRef}
+              className="relative w-full h-full flex flex-col space-y-8  "
+            >
               {inputLostFocus && (
                 <div
                   onClick={() => {
@@ -160,23 +163,33 @@ export default function Home() {
                   className="absolute w-full z-10 bg-AAprimary opacity-90 rounded border-[0.5px] border-gray-700 flex justify-center items-center
                           hover:cursor-pointer"
                 >
-                  <span className="text-gray-400 font-mono">Click to continue..</span>
+                  <span className="text-gray-400 font-mono">
+                    Click to continue..
+                  </span>
                 </div>
               )}
               {/* Text : Wpm & Timer */}
-              {isStartedTyping && <div className="w-full flex justify-between pb-8">
-                <span className="text-gray-400 md:text-xl text-sm ">
-                  {seconds.current == timeToType ? "0" : calculateWpm(myText[1], timeToType - seconds.current)} wpm
-                </span>
-                <TimerSpan
-                  setIsFinished={setIsFinished}
-                  inputLostFocus={inputLostFocus}
-                  seconds={seconds}
-                  timerCountingInterval={timerCountingInterval}
-                  updateStatistics={updateStatistics}
-                />
-              </div>}
-              
+              {isStartedTyping && (
+                <div className="w-full flex justify-between pb-8">
+                  <span className="text-gray-400 md:text-xl text-sm ">
+                    {seconds.current == timeToType
+                      ? "0"
+                      : calculateWpm(
+                          myText[1],
+                          timeToType - seconds.current
+                        )}{" "}
+                    wpm
+                  </span>
+                  <TimerSpan
+                    setIsFinished={setIsFinished}
+                    inputLostFocus={inputLostFocus}
+                    seconds={seconds}
+                    timerCountingInterval={timerCountingInterval}
+                    updateStatistics={updateStatistics}
+                  />
+                </div>
+              )}
+
               <div
                 className="lg:text-3xl md:text-xl sm:text-xl hover:cursor-pointer flex flex-wrap px-2 "
                 onClick={() => inputRef.current.focus()}
@@ -188,28 +201,51 @@ export default function Home() {
                       {item.word.split("").map((char, i) => {
                         if (
                           char.localeCompare(" ") == 0 &&
-                          myText[1][item.indexFrom + i].charColor.localeCompare("text-AAError") == 0
+                          myText[1][item.indexFrom + i].charColor.localeCompare(
+                            "text-AAError"
+                          ) == 0
                         ) {
                           return (
                             <div key={i} className={`relative text-AAError`}>
-                              {i + item.indexFrom == myText[2].CursorPosition ? <CursorCarrotComp /> : <></>}
+                              {i + item.indexFrom ==
+                              myText[2].CursorPosition ? (
+                                <CursorCarrotComp />
+                              ) : (
+                                <></>
+                              )}
                               <div className="relative">
-                                &nbsp; <div className="absolute bottom-0 h-[3px] w-full bg-AAError"></div>
+                                &nbsp;{" "}
+                                <div className="absolute bottom-0 h-[3px] w-full bg-AAError"></div>
                               </div>
                             </div>
                           );
                         } else if (char.localeCompare(" ") == 0) {
                           return (
                             <div key={i} className="relative ">
-                              {i + item.indexFrom == myText[2].CursorPosition ? <CursorCarrotComp /> : <></>}
+                              {i + item.indexFrom ==
+                              myText[2].CursorPosition ? (
+                                <CursorCarrotComp />
+                              ) : (
+                                <></>
+                              )}
                               &nbsp;
                             </div>
                           );
                         } else {
                           return (
-                            <div key={i} className={`relative ${myText[1][item.indexFrom + i].charColor}`}>
+                            <div
+                              key={i}
+                              className={`relative ${
+                                myText[1][item.indexFrom + i].charColor
+                              }`}
+                            >
                               {char}
-                              {i + item.indexFrom == myText[2].CursorPosition ? <CursorCarrotComp /> : <></>}
+                              {i + item.indexFrom ==
+                              myText[2].CursorPosition ? (
+                                <CursorCarrotComp />
+                              ) : (
+                                <></>
+                              )}
                             </div>
                           );
                         }
@@ -235,9 +271,8 @@ export default function Home() {
 
                   className="w-0 h-0 bg-AAprimary text-xl text-center text-gray-600  border-b-gray-600
                   py-2 px-4 focus:outline-none "
-                  
-                  onChange={e => {
-                    if(isStartedTyping==false){
+                  onChange={(e) => {
+                    if (isStartedTyping == false) {
                       seIsStartedTyping(true);
                     }
                     handleOnChangeInput(
@@ -252,21 +287,23 @@ export default function Home() {
                       updateStatistics
                     );
                   }}
-                  onKeyDownCapture={e => {
+                  onKeyDownCapture={(e) => {
                     // prevent cursor in input from jumping two characters
                     if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
                       inputRef.current.setSelectionRange(
                         inputRef.current.value.length,
                         inputRef.current.value.length + 1
                       );
-
                     }
                   }}
                 />
               </div>
             </div>
           </main>
-          <Footer className="absolute bottom-0" link="https://github.com/hktitof/Typing" />
+          <Footer
+            className="absolute bottom-0"
+            link="https://github.com/biishnuthapa"
+          />
         </>
       )}
 
@@ -280,7 +317,7 @@ export default function Home() {
             statistics={statistics}
             timeToType={timeToType}
           />
-          <Footer className="pt-16" link="https://github.com/hktitof/Typing" />
+          <Footer className="pt-16" link="https://github.com/biishnuthapa" />
         </>
       )}
     </div>

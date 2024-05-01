@@ -39,7 +39,7 @@ export default function SocialMediaEmail(props: { finishedLoading: boolean }) {
             {/* Github Icon */}
             <IconClickableWithAnimation
               Icon={GithubIcon}
-              href={"https://github.com/hktitof"}
+              href={"https://github.com/biishnuthapa"}
             />
             {/* Linkedin icon */}
             <IconClickableWithAnimation
